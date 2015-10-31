@@ -1,0 +1,22 @@
+1) mezz+mysql
+2) collecttemplates
+
+3) copy moderna dir into app
+
+4) add moderna/templates to TEMPLATE_DIRS in settings.py above all
+5) add moderna app to INSTALLED_APPS in settings.py above all
+
+6) collectstatic
+
+7) in urls.py, DIRECT_TO_TEMPLATE selected for /
+
+Ideas:
+
+step 1 - obvious
+step 2 - get overridable basic templates
+step 3 - obvious
+step 4 - use moderna templates inst-of them (by TEMPLATE_LOADER-s)
+step 5 - I don't know what for (moderna's views & models?)
+step 6 - gather static from moderna (MANUALLY)
+step 7 - DIRECT_TO_TEMPLATE calls TEMPLATE_LOADER which goes for our new moderna templates
+
